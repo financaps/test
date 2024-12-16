@@ -1,0 +1,1 @@
+function generateGuid(){return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(x){var n=16*Math.random()|0;return("x"==x?n:3&n|8).toString(16)})}window.addEventListener("load",function(x){var n=generateGuid();console.log("guid "+n),window.setConsentBannerParams({uuid:n})});

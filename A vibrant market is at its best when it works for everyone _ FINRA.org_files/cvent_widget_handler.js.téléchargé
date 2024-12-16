@@ -1,0 +1,28 @@
+(function ($, Drupal) {
+  'use strict';
+
+  Drupal.behaviors.cventWidgetHandler = {
+    attach: function (context, settings) {
+      var Y = window.pageYOffset;
+      $('.open-cvent').on('click', function () {
+        var regType = $(this).attr('data-reg-type');
+        $($(this).attr('href')).dialog({
+          draggable: false,
+          dialogClass: 'cvent-modal',
+          modal: true,
+          show: true,
+          width: 720,
+          open: function (event, ui) {
+            $(this).parent().css({'top': Y + 165});
+            $(this).parent().attr('reg-type', regType ? regType : '');
+          },
+          close: function (event, ui) {
+            // Clear relevant inputs on closing the modal.
+            $(this).find("input[type='text']").val("");
+          }
+        });
+      });
+    }
+  };
+
+})(jQuery, Drupal);

@@ -1,0 +1,1 @@
+!function(e,t){"use strict";t.behaviors.removeWrappingWhitespace={attach:function(t,r){e(".embedded-entity").each(function(t,r){r=e(r);var a=e(r.parent());a.html()&&a.html(a.html().replace(/\r?\n|\r/g,""))})}}}(jQuery,Drupal);

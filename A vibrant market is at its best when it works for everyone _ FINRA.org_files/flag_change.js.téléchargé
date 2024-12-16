@@ -1,0 +1,1 @@
+!function(a,i){"use strict";a(".action-unflag")[2]&&a(".action-flag").addClass("isDisabled")}(jQuery,Drupal);
